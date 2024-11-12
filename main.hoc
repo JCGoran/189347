@@ -112,12 +112,12 @@
 	ACHvec=new Vector()							
 	GABAvec=new Vector()	
 	rtime=new Random()	
-	rtime.ACG(seed2)							
+	rtime.Random123(seed2)
 	rnoise=new Random()								
-	rnoise.ACG(seed2)
+	rnoise.Random123(seed2)
 	rbackground=new Random() 
 	rBIP=new Random()	
-	rBIP.ACG(seed2)				
+	rBIP.Random123(seed2)
 	pc = new ParallelContext()	
 	
 
@@ -191,9 +191,9 @@
 	proc placeBIP(){							
 		//***Placement of Bip and SAC inputs on the dendrites of the DSGC							
 		count=0							
-		rBIP.ACG(seed2)						
+		rBIP.Random123(seed2)
 		rBIP.uniform(0,1)	
-		rnoise.ACG(seed2)
+		rnoise.Random123(seed2)
 	    rnoise.normal(0,flickerVAR)
 		
 		objref noisevecBIP[RGC.numsyn],noisevecSACI[RGC.numsyn],noisevecSACE[RGC.numsyn],basenoise,ampnoise,mulnoise
